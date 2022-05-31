@@ -1,0 +1,32 @@
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MainContext } from "./MainContext";
+
+const Header = () => {
+  const [data] = useContext(MainContext);
+
+  return (
+    <>
+      <div className="logo">
+        <span className="text-vertical">"''"</span>
+        <span className="text-vertical">THE</span>
+        <span className="text-capital">GALAXY</span>
+        <span className="text-vertical">"''"</span>
+      </div>
+      <div className="nav-links">
+        <Link to="/home" className="link ">
+          Home
+        </Link>
+        {data
+          .filter((category) => category.id % 5 === 0)
+          .map((items) => (
+            <Link to={`/category/${items.category}`} className="link">
+              {items.category}
+            </Link>
+          ))}
+      </div>
+      <hr className="horizontal-line" />
+    </>
+  );
+};
+export default Header;
