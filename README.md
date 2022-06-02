@@ -1,4 +1,4 @@
-## Project url: https://react-blog-app-0000.netlify.app/
+## Project url: [https://react-blog-app-0000.netlify.app/](https://react-blog-app-0000.netlify.app/)
 
 
 
